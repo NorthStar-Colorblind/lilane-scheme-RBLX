@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "Lilane Scheme",
+    "description": "Modifies parts of the Roblox website to help improve your experience, whether that be as a developer or player. Gives a new super-dark theme to roblox and a glowy and cosy feel. Only works on dark mode.",
+    "icons": {
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png"
+    },
+    "version": "2.0",
+
+    "permissions": [
+        "tabs",
+        "webNavigation",
+        "https://*.roblox.com/*"
+    ],    
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.roblox.com/*"],
+            "js": ["content.js"]
+        }
+    ]
+}
