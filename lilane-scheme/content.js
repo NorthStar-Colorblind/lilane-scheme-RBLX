@@ -10,6 +10,7 @@ const gameInstances = document.getElementById("game-instances");
 const cardItem = document.querySelectorAll('[class*="card-item"]');
 
 const robux = document.querySelectorAll(".btn-growth-md .btn-full-width .unsubscribed .badge-container .ng-scope");
+const banner = document.getElementById("desktop-app-banner");
 
 let navigation = document.getElementById("navigation");
 let header = document.querySelector(".navbar-fixed-top .rbx-header");
@@ -38,6 +39,11 @@ if (sectionContent)
         element.style.backgroundColor = "#151515";
         element.style.borderRadius = "5px";
     })
+}
+
+if (banner)
+{
+    banner.remove();
 }
 
 const imgs = document.querySelectorAll('.thumbnail-2d-container img');
